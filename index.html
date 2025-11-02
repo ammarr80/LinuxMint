@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind import via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script> 
+    <!-- Linking files-->
+    <!-- Fonts import -->
+   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+   <!-- Icons import -->
+    <!-- <link rel="icon" type="image/png" href="/web/img/favicon.ico"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+     <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
+     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> -->
+
+
+
+    <!-- Custom styles -->
+     <style>
+      
+  :root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #3ba728;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+
+    --primary: #68c174;
+    --secondary: #8f9397;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f0f1f3;
+    --dark: #343a40;
+  }
+  /* Background utility classes */
+  .bg-primary { background: var(--primary); }
+  .bg-secondary { background: var(--secondary); }
+  .bg-success { background: var(--success); }
+  .bg-info { background: var(--info); }
+  .bg-warning { background: var(--warning); }
+  .bg-danger { background: var(--danger); }
+  .bg-light { background: var(--light); }
+  .bg-dark { background: var(--dark); }
+
+  .font-playfair {
+    font-family: "Playfair Display", serif;
+  }
+
+  .font-poppins {
+    font-family: "Poppins", sans-serif;
+  }
+
+  .radial-bg {
+    background: radial-gradient(circle at top, var(--teal), var(--green));
+  }
+  .circle-bottom {
+    clip-path: circle(80% at 50% 0%);
+  }
+  #wifi {
+    transform: rotate(45deg);
+  }
+  #wifi:hover {
+    animation: spinSpecial 0.4s1;
+    transform: rotate(45deg);
+  }
+  .icons:hover {
+    animation: spin 0.4s forwards;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: translateY(0px);
+    } 50% {
+      transform: translateY(-10px);
+      opacity: 0;
+    } 80% {
+      transform: translateY(5px);
+      opacity: 1;
+    }
+     100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes spinSpecial {
+      0% {
+      transform: translateY(0px);
+
+    } 50% {
+      transform: translateY(-10px);
+      opacity: 0;
+
+    } 80% {
+      transform: translateY(5px);
+      opacity: 1;
+    }
+     100% {
+      transform: translateY(0px);
+      opacity: 1;
+  }
+}
+main {
+  background-image: url(/images/hero.png), linear-gradient(to bottom right, var(--teal), var(--green));
+  background-size: cover, contain;
+  background-repeat: no-repeat, no-repeat;
+  background-position: 100% 100%;
+}
+.cool-bg {
+   background-image: url(/images/hero.png), linear-gradient(to bottom right, var(--teal), var(--green));
+  background-size: cover, contain;
+  background-repeat: no-repeat, no-repeat;
+  background-position: 100% 100%;
+}
+.arrow {
+  transform: rotate(90deg);
+  
+}
+
+@media (min-width: 1024px) {
+  /* styles for screens 1024px and above */
+  #card_1 {
+    left: 35%;
+  }
+
+  #card_4 {
+    left: 32%;
+  }
+}
+@media (min-width: 1132px ) {
+  #card_1 {
+    left: 40%;
+  }
+}
+@media (min-width: 1240px) {
+  /* styles for screens 1240px and above */
+  #card_1 {
+    left: 45%;
+  }
+}
+
+
+#link_1:hover + #card_1 {
+  opacity: 1;
+}
+#link_2:hover + #card_2 {
+  opacity: 1;
+}
+#link_3:hover + #card_3 {
+  opacity: 1;
+}
+#link_4:hover + #card_4 {
+  opacity: 1;
+}
+
+.pop-up {
+  animation: slideUp 0.2s ease-in-out forwards;
+}
+@keyframes slideUp {
+  0% {
+    transform: translateY(20px);
+  } 100% {
+    transform: translateY(0px);
+  }
+}
+
+</style>
+
+     <!-- Favicon import -->
+        <link rel="shortcut icon" href="/web/img/favicon.ico">
+        
+    <title>Home - Linux Mint</title>
+</head>
+<body class="">
+    <main class="min-h-[95dvh]   lg:min-h-[100dvh] lg:">
+      <nav class="hidden lg:flex lg:gap-4 lg:h-8  lg:justify-end lg:items-center lg:max-w-[1150px] lg:mx-auto">
+        <a href="" class="icons" id="wifi"><i class="fa-solid fa-wifi text-white hover:text-gray-800 hover:hover fa-xs"></i></a>
+        <a href="" class="icons"><i class="fa-solid fa-envelope text-white hover:text-gray-800 hover:hover fa-sm"></i></a>
+        <a href="" class="icons"><i class="fa-solid fa-commenting text-white hover:text-gray-800 hover:hover fa-sm"></i></a>
+        <a href="" class="icons"><i class="fa-brands fa-facebook text-white hover:text-gray-800 hover:hover fa-sm"></i></a>
+        <a href="" class="icons"><i class="fa-brands fa-youtube text-white hover:text-gray-800 hover:hover fa-sm"></i></a>
+        <a href="" class="icons"> <i class="fa-brands fa-instagram text-white hover:text-gray-800 hover:hover fa-sm"></i></a>
+      </nav>
+
+        <div class="">
+          <div class="w-[95%] flex mx-auto  py-2 items-center ">
+              <div class="w-[90%] lg:mx-auto lg:flex lg:justify-between lg:min-w-[1000px] lg:max-w-[1080px]">
+                  <img src="/images/logo-mono.svg" alt="linux_mint_logo" class="w-[60%] max-w-[200px]">
+                  <nav class="hidden lg:flex items-center gap-6">
+                    <a href="" class="text-white hover:text-gray-600 font-semibold">Home</a>
+                    <div class="flex gap-6 ">
+
+                      <div class="flex flex-col">
+                        <div><a href="" id="link_1" data-value="DOWNLOAD" class="links text-white hover:text-gray-600 font-semibold relative flex items-center gap-2">Download <span class="arrows" id="arrow_1"><i class="fa-solid fa-chevron-right arrow text-[8px] relative bottom-[1.5px]"></i></span></a></div>
+                        <!-- 15 20 10 25 -->
+                        <div class="hoverCards">
+                          <div id="card_1" data-id="1" data-value="DOWNLOAD" class="pop-up transition-all duration-300 cardsContainer left-[40%] top-[100px] opacity-0  min-h-[15dvh]  absolute bg-white min-w-[20em] pt-4">
+                            <div id="upperArea" class="grid grid-cols-[380px_200px]">
+                              
+                            <div class="flex flex-col px-4">
+                              <p class="text-gray-700 font-semibold mb-4">Latest version</p>
+                              <a class="flex gap-2 items-center hover:text-[var(--green)] cursor-pointer">Linux Mint 22.2 <span class="font-semibold bg-[var(--green)] text-xs h-6 rounded text-white p-1">Recommended</span></a>
+                            </div>
+                            <div class="flex flex-col mb-6">
+                              <p class="text-gray-700 font-semibold mb-4">Other versions</p>
+                              <a href="" class="hover:text-[var(--green)] mb-2">LMDE 7</a>
+                              <a href="" class="hover:text-[var(--green)]">All Versions</a>
+                            </div>
+                          </div>
+
+                          <div id="lowerArea" class="cool-bg text-white grid grid-cols-[300px_200px] gap-4 px-4 py-6 border border-white1 items-center">
+                            <div class="">
+                              <p class="font-semibold font-poppins text-2xl">Checkout the docs!</p>
+                              <p class="text-sm">Follow the guide to learn how to download and install Linux Mint.</p>
+                            </div>
+                            <div class="justify-end flex">
+                              <a href="" class="border-2 border-white font-semibold px-2 py-2 hover:bg-white hover:text-gray-700 ">Installation Guide</a>
+                            </div>
+                          </div>                            
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="flex flex-col">
+                        <div><a href="" id="link_2" data-value="PROJECT" class="links text-white hover:text-gray-600 font-semibold relative flex items-center gap-2">Project <span class="arrows" id="arrow_2"><i class="fa-solid fa-chevron-right arrow text-[8px] relative bottom-[1.5px]"></i></span></a></div>
+                        <div class="hoverCards">
+                          <div id="card_2" data-id="2" data-value="PROJECT" class="pop-up transition-all duration-300 cardsContainer opacity-0  top-[100px] min-h-[20dvh] absolute bg-white w-[340px]">
+
+                            <div class="pt-4 flex flex-col gap-4 pt-4">
+                              <div class="grid grid-cols-2">
+                                <div id="left" class="px-4">
+                                  <p class="text-gray-700 font-semibold mb-4">Developed by</p>
+                                  <nav class="flex flex-col gap-2">
+                                    <a href="" class="hover:text-[var(--green)]">Ammar pro</a>
+
+                                    <a href="" class="hover:text-[var(--green)]">VS Code</a>
+                                    <a href="" class="hover:text-[var(--green)]">Brain</a>
+                                    <a href="" class="hover:text-[var(--green)]">Fingers</a>
+                                    <a href="" class="hover:text-[var(--green)]">Other body parts</a>
+                                  </nav>
+                                </div>
+
+                                <div id="right" class="px-4">
+                                  <p class="text-gray-700 font-semibold mb-4">Ammar's mentors</p>
+                                  <nav class="flex flex-col gap-2">
+                                    <a href="" class="hover:text-[var(--green)]"><i class="fa-solid fa-star"></i> Zaheer</a>
+                                    <a href="" class="hover:text-[var(--green)]"><i class="fa-solid fa-star"></i> Waqas</a>
+                                    <div class="flex flex-col"><a href="" class="hover:text-[var(--green)]"><i class="fa-regular fa-star"></i> ChatGPT</a>
+                                     <span class="text-xs italic">(ahem ahem)</span>
+                                    </div>
+                                  </nav>
+                                </div>
+                              </div>
+                              <div class="cool-bg">
+                                <div class="">
+                                  <p class="font-semibold text-white p-4">Check them out, really cool people!</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div></div>
+                          </div>
+                        </div>
+                      </div> 
+
+                      <div class="flex flex-col">
+                        <div><a href="" id="link_3"  data-value="ABOUT" class="links text-white hover:text-gray-600 font-semibold relative flex items-center gap-2">About <span class="arrows" id="arrow_3"><i class="fa-solid fa-chevron-right arrow text-[8px] relative bottom-[1.5px]"></i></span></a></div>
+                        <div class="hoverCards">
+                          <div id="card_3" data-id="3" data-value="ABOUT" class="pop-up transition-all duration-300 cardsContainer  top-[100px] min-h-[10dvh] absolute bg-white w-[380px] opacity-0 grid grid-cols-2 left-[65%]">
+                            <div class="px-4 py-4">
+                              <nav class="flex flex-col gap-4 px-4 pt-4">
+                                <a href="" class="text-gray-500 hover:text-[var(--green)]">About Linux Mint</a>
+                                <a href="" class="text-gray-500 hover:text-[var(--green)]">FAQ</a>
+                                <a href="" class="text-gray-500 hover:text-[var(--green)]">Documentation</a>
+                                <a href="" class="text-gray-500 hover:text-[var(--green)]">Screenshots</a>
+                              </nav>
+                            </div>
+                            <div class="px-4 py-4">
+                              <nav class="flex flex-col gap-4 px-4 pt-4">
+                                <a href="" class="text-gray-500 hover:text-[var(--green)]">Privacy & Cookies</a>
+                                <a href="" class="text-gray-500 hover:text-[var(--green)]">Team</a>
+                                <a href="" class="text-gray-500 hover:text-[var(--green)]">Contact Us</a>
+                              </nav>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="flex flex-col">  
+                        <div><a href="" id="link_4" data-value="LINKS" class="links text-white hover:text-gray-600 font-semibold relative flex items-center gap-2">Links <span class="arrows" id="arrow_4"><i class="fa-solid fa-chevron-right arrow text-[8px] relative bottom-[1.5px]"></i></span></a></div>
+                        <div class="hoverCards">
+                          <div id="card_4" data-id="4" data-value="LINKS" class="pop-up transition-all duration-300 cardsContainer left-[40%] top-[100px] opacity-1 min-h-[25dvh] absolute bg-white w-[675px]">
+                            <div class="grid grid-cols-3">
+                              <div class="flex flex-col gap-4 px-4 pt-4">
+                                <p class="text-gray-600 font-semibold">Official</p>
+                                <a href="" class="flex items-center gap-1 hover:text-[var(--green)]"><i class="fa-solid fa-globe"></i> Website <span class="bg-[var(--green)] text-white font-semibold px-1 rounded">Here</span></a>
+                                <a href="" class="hover:text-[var(--green)]"><i class="fa-solid fa-blog"></i> Blog</a>
+                                <a href="" class="hover:text-[var(--green)]"><i class="fa-solid fa-comments"></i> Forums</a>
+                                <a href="" class="hover:text-[var(--green)]"><i class="fa-solid fa-users"></i> Community Website</a>
+                              </div>
+                              <div class="flex flex-col gap-4 px-4 pt-4">
+                                <p class="text-gray-600 font-semibold">Social</p>
+                                <a href="" class="hover:text-[var(--green)]"><i class="fa-brands fa-github"></i> Github</a>
+                                <a href="" class="hover:text-[var(--green)]"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                                <a href="" class="hover:text-[var(--green)]"><i class="fa-brands fa-x-twitter"></i> Twitter</a>
+                                <a href="" class="hover:text-[var(--green)]"><i class="fa-brands fa-mastodon"></i> Mastodom</a>
+                              </div>
+                              
+                              
+                              <div class="flex flex-col gap-4 px-4 pt-4 mb-4">
+                                <p class="text-gray-600 font-semibold">Community</p>
+                                <a href="" class="hover:text-[var(--green)]"><i class="fa-brands fa-reddit"></i> Reddit</a>
+                                <a href="" class="hover:text-[var(--green)]"><i class="fa-brands fa-discord"></i> Discord</a>
+                                <a href="" class="hover:text-[var(--green)]"><i class="fa-solid fa-hashtag"></i> IRC</a>
+                                <a href="" class="hover:text-[var(--green)]"><i class="fa-solid fa-podcast"></i> MintCast Podcast</a>
+                                <a href="" class="hover:text-[var(--green)]"><i class="fa-solid fa-people-group"></i> Local Communities</a>
+
+                              </div>
+                              
+                            </div>
+                              <div class="px-4 cool-bg py-4">
+                                <p class="font-poppins font-bold text-white">Websites in right column are maintained by community.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <a href="" class="text-gray-700 hover:text-gray-600 font-semibold bg-white hover:bg-white/90 px-4 py-2 rounded">Hire me</a>
+                  </nav>
+              </div>
+              <div class="flex flex-col gap-[6px] relative lg:hidden">
+                  <span class="w-6 h-[2px] rounded bg-white"></span>
+                  <span class="w-6 h-[2px] rounded bg-white"></span>
+                  <span class="w-6 h-[2px] rounded bg-white"></span>
+              </div>
+          </div>
+        </div>
+
+        <script>
+
+          let link_1 = document.getElementById("link_1");
+          let link_2 = document.getElementById("link_2");
+          let link_3 = document.getElementById("link_3");
+          let link_4 = document.getElementById("link_4");
+
+          let links = document.querySelectorAll('#link_1, #link_2, #link_3, #link_4');
+
+          let card_1 = document.getElementById("card_1");
+          let card_2 = document.getElementById("card_2");
+          let card_3 = document.getElementById("card_3");
+          let card_4 = document.getElementById("card_4");
+
+          let cards = document.querySelectorAll('[data-id="1"], [data-id="2"], [data-id="3"], [data-id="4"] ')
+
+          links.forEach(link => {
+            link.addEventListener("mouseenter", () => {
+              if (link.dataset.value == "DOWNLOAD") {
+                card_1.classList.remove("hidden");
+              } else if (link.dataset.value == "PROJECT") {
+                card_2.classList.remove("hidden");
+              } else if (link.dataset.value == "ABOUT") {
+                card_3.classList.remove("hidden");
+              } else if (link.dataset.value == "LINKS") {
+                card_4.classList.remove("hidden");
+              }
+              let unselected = [...cards].filter(c => c.dataset.value !== link.dataset.value);
+              unselected.forEach(c => {
+                c.classList.add("hidden");
+              });
+            });
+          });
+
+          
+          link_1.addEventListener("mouseenter", () => {
+            card_1.classList.remove("opacity-0");
+            card_1.classList.add("opacity-1");
+
+          });
+          link_1.addEventListener("mouseleave", () => {
+            card_1.classList.remove("opacity-1");
+            card_1.classList.add("opacity-0");
+          });
+          link_2.addEventListener("mouseenter", () => {
+            card_2.classList.remove("opacity-0");
+            card_2.classList.add("opacity-1");
+          });
+          link_2.addEventListener("mouseleave", () => {
+            card_2.classList.remove("opacity-1");
+            card_2.classList.add("opacity-0");
+          });
+          link_3.addEventListener("mouseenter", () => {
+            card_3.classList.remove("opacity-0");
+            card_3.classList.add("opacity-1");
+          });
+          link_3.addEventListener("mouseleave", () => {
+            card_3.classList.remove("opacity-1");
+            card_3.classList.add("opacity-0");
+          });
+          link_4.addEventListener("mouseenter", () => {
+            card_4.classList.remove("opacity-0");
+            card_4.classList.add("opacity-1");
+          });
+          link_4.addEventListener("mouseleave", () => {
+            card_4.classList.remove("opacity-1");
+            card_4.classList.add("opacity-0");
+          });
+
+        </script>
+
+        <div id="lgHero" class="lg:flex lg:items-center  lg:justify-center lg:mx-auto lg:max-w-[1300px] ">  
+            <div class="min-h-[60dvh] px-4 flex flex-col justify-start py-20 gap-2 md:px-8  lg:pr-0">
+                <p class="text-white font-poppins min-w-[268px]">"Zara"</p>
+                <p class="text-white text-5xl font-poppins min-w-[268px] lg:max-w-[430px] lg:text-6xl lg:mb-41">Linux Mint 22.2</p>
+                <p class="text-white font-semibold text-xl mb-4 max-w-[600px] lg:text-2xl">The latest version of the friendly operating system is here. Install it on your computer today!</p>
+                <div class="flex flex-col gap-2 sm:flex-row md:gap-4">
+                    <button class="w-1/3 bg-white font-semibold text-gray-700 rounded p-2 hover:bg-white/90 min-w-[92px] max-w-[120px] md:max-w-[120px]">Download</button>
+                    <button class="w-fit rounded font-semibold bg-transparent border-2 border-white hover:text-black hover:bg-white transition-all duration-400 text-white py-2 px-4">Installation Instructions</button>
+                </div>
+            </div>
+  
+            <div>
+              <img src="/images/devices.png" alt="linuxMintOnPCs" class="hidden lg:block w-[485] h-[348]">
+            </div>
+          </div>
+    </main>
+</body>
+</html>
