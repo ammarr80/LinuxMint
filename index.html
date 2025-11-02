@@ -179,8 +179,7 @@ main {
 </style>
 
      <!-- Favicon import -->
-        <link rel="icon" type="image/x-icon" href="https://linuxmint.com/favicon.ico">
-
+        <link rel="shortcut icon" href="/web/img/favicon.ico">
         
     <title>Home - Linux Mint</title>
 </head>
@@ -198,7 +197,7 @@ main {
         <div class="">
           <div class="w-[95%] flex mx-auto  py-2 items-center ">
               <div class="w-[90%] lg:mx-auto lg:flex lg:justify-between lg:min-w-[1000px] lg:max-w-[1080px]">
-                  <img src="logo-mono.svg" alt="linux_mint_logo" class="w-[60%] max-w-[200px]">
+                  <img src="/images/logo-mono.svg" alt="linux_mint_logo" class="w-[60%] max-w-[200px]">
                   <nav class="hidden lg:flex items-center gap-6">
                     <a href="" class="text-white hover:text-gray-600 font-semibold">Home</a>
                     <div class="flex gap-6 ">
@@ -237,7 +236,7 @@ main {
                       <div class="flex flex-col">
                         <div><a href="" id="link_2" data-value="PROJECT" class="links text-white hover:text-gray-600 font-semibold relative flex items-center gap-2">Project <span class="arrows" id="arrow_2"><i class="fa-solid fa-chevron-right arrow text-[8px] relative bottom-[1.5px]"></i></span></a></div>
                         <div class="hoverCards">
-                          <div id="card_2" data-id="2" data-value="PROJECT" class="pop-up transition-all duration-300 cardsContainer opacity-0  top-[100px] min-h-[20dvh] absolute bg-white w-[340px]">
+                          <div id="card_2" data-id="2" data-value="PROJECT" class="pop-up transition-all duration-300 cardsContainer opacity-0 hover:block top-[100px] min-h-[20dvh] absolute bg-white w-[340px]">
 
                             <div class="pt-4 flex flex-col gap-4 pt-4">
                               <div class="grid grid-cols-2">
@@ -301,7 +300,7 @@ main {
                       <div class="flex flex-col">  
                         <div><a href="" id="link_4" data-value="LINKS" class="links text-white hover:text-gray-600 font-semibold relative flex items-center gap-2">Links <span class="arrows" id="arrow_4"><i class="fa-solid fa-chevron-right arrow text-[8px] relative bottom-[1.5px]"></i></span></a></div>
                         <div class="hoverCards">
-                          <div id="card_4" data-id="4" data-value="LINKS" class="pop-up transition-all duration-300 cardsContainer left-[40%] top-[100px] opacity-1 min-h-[25dvh] absolute bg-white w-[675px]">
+                          <div id="card_4" data-id="4" data-value="LINKS" class="pop-up transition-all duration-300 cardsContainer left-[40%] top-[100px] opacity-0 min-h-[25dvh] absolute bg-white w-[675px]">
                             <div class="grid grid-cols-3">
                               <div class="flex flex-col gap-4 px-4 pt-4">
                                 <p class="text-gray-600 font-semibold">Official</p>
@@ -389,7 +388,7 @@ main {
             card_1.classList.add("opacity-1");
 
           });
-          link_1.addEventListener("mouseleave", () => {
+          card_1.addEventListener("mouseleave", () => {
             card_1.classList.remove("opacity-1");
             card_1.classList.add("opacity-0");
           });
@@ -397,7 +396,7 @@ main {
             card_2.classList.remove("opacity-0");
             card_2.classList.add("opacity-1");
           });
-          link_2.addEventListener("mouseleave", () => {
+          card_2.addEventListener("mouseleave", () => {
             card_2.classList.remove("opacity-1");
             card_2.classList.add("opacity-0");
           });
@@ -405,7 +404,7 @@ main {
             card_3.classList.remove("opacity-0");
             card_3.classList.add("opacity-1");
           });
-          link_3.addEventListener("mouseleave", () => {
+          card_3.addEventListener("mouseleave", () => {
             card_3.classList.remove("opacity-1");
             card_3.classList.add("opacity-0");
           });
@@ -413,7 +412,7 @@ main {
             card_4.classList.remove("opacity-0");
             card_4.classList.add("opacity-1");
           });
-          link_4.addEventListener("mouseleave", () => {
+          card_4.addEventListener("mouseleave", () => {
             card_4.classList.remove("opacity-1");
             card_4.classList.add("opacity-0");
           });
@@ -432,10 +431,9 @@ main {
             </div>
   
             <div>
-              <img src="devices.png" alt="linuxMintOnPCs" class="hidden lg:block w-[485] h-[348]">
+              <img src="/images/devices.png" alt="linuxMintOnPCs" class="hidden lg:block w-[485] h-[348]">
             </div>
           </div>
     </main>
 </body>
-
 </html>
